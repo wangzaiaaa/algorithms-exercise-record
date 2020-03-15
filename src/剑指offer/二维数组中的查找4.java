@@ -11,7 +11,7 @@ public class 二维数组中的查找4 {
         }
     }
     public boolean find(int [][] matrix,int target,int x,int y){
-        if(x < 0 || x >= matrix.length || y < 0 || y >= matrix[0].length){gi
+        if(x < 0 || x >= matrix.length || y < 0 || y >= matrix[0].length){
             return false;
         }else{
             if(matrix[x][y] == target){
