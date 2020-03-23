@@ -5,7 +5,7 @@ import java.util.*;
 public class n个骰子的点数60 {
     static Map<Integer,Integer> map = new HashMap<>();
     public static double[] twoSum(int n) {
-        bfs(n,0,0);
+        dfs(n,0,0);
         Set<Integer> set = map.keySet();
         int [] sortedSet = new int[set.size()];
         int index = 0;
@@ -21,7 +21,7 @@ public class n个骰子的点数60 {
         }
         return res;
     }
-    public static void bfs(int n,int layel,int cur){
+    public static void dfs(int n,int layel,int cur){
         if(layel > n){
             return;
         }else{
@@ -29,7 +29,7 @@ public class n个骰子的点数60 {
                 map.put(cur,map.getOrDefault(cur,0) + 1);
             }
             for(int i = 1; i <= 6; i++){
-                bfs(n,layel + 1,cur + i);
+                dfs(n,layel + 1,cur + i);
             }
         }
     }
